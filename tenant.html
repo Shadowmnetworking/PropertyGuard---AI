@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tenant Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ tenant.name }}</h1>
+
+    <p><strong>Unit:</strong> {{ tenant.unit }}</p>
+    <p><strong>Rent Amount:</strong> {{ tenant.rent_amount }}</p>
+    <p><strong>Status:</strong> {{ tenant.status }}</p>
+
+    <h2>Payment History</h2>
+    <table border="1">
+        <tr><th>Amount</th><th>Date</th></tr>
+        {% for payment in payments %}
+            {% if payment.tenant_id == tenant.tenant_id %}
+            <tr>
+                <td>{{ payment.amount }}</td>
+                <td>{{ payment.date }}</td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+</body>
+</html>
