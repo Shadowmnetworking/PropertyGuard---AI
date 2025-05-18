@@ -1,0 +1,4 @@
+tenant_id,name,unit,rent_amount,status
+1,Jane Doe,A101,15000,Paid
+2,John Smith,B202,18000,Due
+3,Ali Mwangi,C303,12000,Paid
